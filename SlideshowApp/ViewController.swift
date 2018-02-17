@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    let photos = ["1.jpg", "2.jpg", "3.jpg"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
