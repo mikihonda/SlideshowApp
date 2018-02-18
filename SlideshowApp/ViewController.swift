@@ -26,8 +26,25 @@ class ViewController: UIViewController {
         displayImage()
     }
     
+    @IBAction func onTimer(_ sender: Any) {
+        
+        func onTimer(timer: Timer) {
+            
+            // onTimerの関数を呼び出す
+            print("onTimer")
+            
+            dispImageNo += 1
+            
+            displayImage()
+            
+        }
+    }
+    
     // セグエを使用して画面遷移 segueID"result"
     // performSegueWithIdentifier("result", sender: nil)
+    
+    // 一定の間隔で処理するタイマー
+    var timer: Timer?
     
     // 表示している画像の番号
     var dispImageNo = 0
@@ -37,6 +54,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         displayImage()
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.onTimer(_:)), userInfo: nil, repeats: true)
         
     }
     
