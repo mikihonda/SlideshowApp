@@ -9,14 +9,39 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var imageView: UIImageView!
     
+    // セグエを使用して画面遷移 segueID"result"
+    // performSegueWithIdentifier("result", sender: nil)
     
-    let photos = ["1.jpg", "2.jpg", "3.jpg"]
-
+    // 表示している画像の番号
+    // var dispImageNo = 1
+    
+    // func displayImage() {
+        
+        // 画像の配列
+        // let imageNameArray = [
+        //     "1.jpg",
+        //    "2.jpg",
+        //    "3.jpg",
+        //]
+        // 表示している画像の番号から名前を取り出す
+        // let name = imageNameArray[dispImageNo] }
+        
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // 画像を読み込み
+        let image = UIImage(named: "1.jpg")
+        
+        // ImageViewに読み込んだ画像をセット
+        imageView.image = image
+        
     }
 
     override func didReceiveMemoryWarning() {
