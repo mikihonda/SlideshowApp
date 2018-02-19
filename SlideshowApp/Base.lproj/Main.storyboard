@@ -37,17 +37,6 @@
                                     <action selector="onNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3R-cK-Ryk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMn-GZ-YwC">
-                                <rect key="frame" x="137" y="382" width="101" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="再生/停止">
-                                    <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUX-7t-gnh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvQ-9i-XDZ">
                                 <rect key="frame" x="278" y="383" width="43" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,15 +55,26 @@
                                     <segue destination="XCS-Ts-ukC" kind="show" id="VJj-4k-qMd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMn-GZ-YwC">
+                                <rect key="frame" x="137" y="383" width="101" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="再生/停止">
+                                    <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUX-7t-gnh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="3n5-rF-FnA" id="HC1-LL-qx5"/>
-                        <outlet property="onNEXT" destination="6qj-H6-AfF" id="EtW-ci-LG5"/>
-                        <outlet property="onPlayPause" destination="gMn-GZ-YwC" id="wUP-My-MJm"/>
-                        <outlet property="onReturn" destination="GvQ-9i-XDZ" id="gaE-kg-WCu"/>
+                        <outlet property="nextButton" destination="6qj-H6-AfF" id="x4j-vU-EMC"/>
+                        <outlet property="playpauseButton" destination="gMn-GZ-YwC" id="5E8-3J-mAM"/>
+                        <outlet property="returnButton" destination="GvQ-9i-XDZ" id="A76-Pm-2Yd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

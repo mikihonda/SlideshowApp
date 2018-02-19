@@ -9,9 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var onNEXT: UIButton!
-    @IBOutlet weak var onPlayPause: UIButton!
-    @IBOutlet weak var onReturn: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var playpauseButton: UIButton!
+    @IBOutlet weak var returnButton: UIButton!
     
     @IBAction func onNext(_ sender: Any) {
         // 1つ進む
@@ -31,17 +31,17 @@ class ViewController: UIViewController {
         
         if self.timer != nil {
             
-            onPlayPause.setTitle("Play", for: .normal)
+            playpauseButton.setTitle("Play", for: .normal)
             timer?.invalidate()
             timer = nil
             
         } else {
             
-            onPlayPause.setTitle("Pause", for: .normal)
+            playpauseButton.setTitle("Pause", for: .normal)
             
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
-            onNext.isEnabled = false
-            onReturn.isEnabled = false
+            nextButton.isEnabled = false
+            returnButton.isEnabled = false
             
         }
     }
