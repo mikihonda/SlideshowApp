@@ -21,9 +21,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onReturn(_ sender: Any) {
-        
+
         dispImageNo -= 1
-        
+
         displayImage()
     }
 
@@ -102,7 +102,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func onClickBig(_ sender: UIButton) {
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -110,6 +109,10 @@ class ViewController: UIViewController {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
 
         resultViewController.imageView = self.imageView
+        
+        // 遷移先のResultViewControllerで宣言しているimageに代入して渡す
+        resultViewController.image = imageView.image!
+        
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
