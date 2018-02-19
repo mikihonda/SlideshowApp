@@ -2,7 +2,7 @@
 //  ResultViewController.swift
 //  SlideshowApp
 //
-//  Created by 外間美希 on 2018/02/18.
+//  Created by 外間美希 on 2018/02/19.
 //  Copyright © 2018年 miki.honda. All rights reserved.
 //
 

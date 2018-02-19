@@ -89,10 +89,11 @@ class ViewController: UIViewController {
         imageView.image = image
     }
     
+    // セグエを使用して画面遷移 segueID"result"
+    performSegueWithIdentifier("result", sender: nil)
+    
     @IBOutlet weak var imageView: UIImageView!
     
-    // セグエを使用して画面遷移 segueID"result"
-    // performSegueWithIdentifier("result", sender: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +106,9 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
 }
 
