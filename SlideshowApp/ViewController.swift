@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var unNext: UIButton!
+    @IBOutlet weak var onNext: UIButton!
     @IBOutlet weak var onPlayPause: UIButton!
     @IBOutlet weak var onReturn: UIButton!
     
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             
             onPlayPause.setTitle("Pause", for: .normal)
             
-            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: (#selector(play)), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: (#selector(Play)), userInfo: nil, repeats: true)
             onNext.isEnabled = false
             onReturn.isEnabled = false
             
