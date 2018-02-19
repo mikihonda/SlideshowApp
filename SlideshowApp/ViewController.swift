@@ -30,13 +30,13 @@ class ViewController: UIViewController {
     @IBAction func onPlayPause(_ sender: Any) {
         if self.timer! = nil {
             
-            onPlayPause.setTitle("Play", for: UIControlState.normal)
+            onPlayPause.setTitle("Play", for: .normal)
             timer?.invalidate()
             timer = nil
             
         } else {
             
-            onPlayPause.setTitle("Pause", for: UIControlState.normal)
+            onPlayPause.setTitle("Pause", for: .normal)
             
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: (#selector(play)), userInfo: nil, repeats: true)
             onNext.isEnabled = false
