@@ -45,6 +45,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="onPlayStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7d-NT-TBb"/>
                                     <action selector="onTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RN8-UH-CRi"/>
                                 </connections>
                             </button>
@@ -69,11 +70,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="549-qq-gGb">
-                    <connections>
-                        <action selector="onTapImage:" destination="BYZ-38-t0r" id="krc-M1-Q7X"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="549-qq-gGb"/>
             </objects>
             <point key="canvasLocation" x="-210.40000000000001" y="-67.016491754122939"/>
         </scene>

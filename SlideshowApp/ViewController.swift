@@ -25,37 +25,42 @@ class ViewController: UIViewController {
         
         displayImage()
     }
-    
-    @IBAction func onTimer(_ sender: Any) {
+
+    @IBAction func onPlayStop(_ sender: Any) {
         
-        func onTimer(timer: Timer) {
+        var toggleButton:UIButtonItem
+        
+        if {
+            // スライドショーの一時停止処理など
+            toggleButton = UIButtonItem(barButtonSystemItem: UIBarButtonSystemItem.play, target: self, action: #selector(UIViewController.onPlayStop(_:)))
+        } else {
             
-            // onTimerの関数を呼び出す
-            print("onTimer")
-            
-            dispImageNo += 1
-            
-            displayImage()
-            
+            // スライドショーの再生処理など
+            toggleButton = UIButtonItem(barButtonSystemItem: UIBarButtonSystemItem.stop, target: self, action: #selector(UIViewController.onPlayStop(_:)))
         }
+        
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.onPlayStop(_:)), userInfo: nil, repeats: true)
+        
     }
-    
-    // セグエを使用して画面遷移 segueID"result"
-    // performSegueWithIdentifier("result", sender: nil)
-    
-    // 一定の間隔で処理するタイマー
-    var timer: Timer?
     
     // 表示している画像の番号
     var dispImageNo = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    // 一定の間隔で処理するタイマー
+    var timer: Timer?
+    
+    // Timerによって一定の間隔で呼び出される関数
+    func onTimer(timer: Timer) {
         
+        // 関数が呼び出されていることを確認
+        print("onTimer")
+        
+        // 表示している画像の番号を1増やす
+        dispImageNo += 1
+        
+        // 表示している画像の番号を元に画像を表示する
         displayImage()
-        
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.onTimer(_:)), userInfo: nil, repeats: true)
         
     }
     
@@ -84,6 +89,17 @@ class ViewController: UIViewController {
         
         // ImageViewに読み込んだ画像をセット
         imageView.image = image
+    }
+    
+    // セグエを使用して画面遷移 segueID"result"
+    // performSegueWithIdentifier("result", sender: nil)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        displayImage()
+        
     }
 
     override func didReceiveMemoryWarning() {
