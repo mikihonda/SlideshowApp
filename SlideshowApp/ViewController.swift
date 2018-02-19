@@ -35,13 +35,20 @@ class ViewController: UIViewController {
             timer?.invalidate()
             timer = nil
             
+            nextButton.isEnabled = true
+            nextButton.setTitleColor(UIColor.magenta, for: .normal)
+            returnButton.isEnabled = true
+            returnButton.setTitleColor(UIColor.magenta, for: .normal)
+            
         } else {
             
             playpauseButton.setTitle("Pause", for: .normal)
             
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
             nextButton.isEnabled = false
+            nextButton.setTitleColor(UIColor.lightGray, for: .normal)
             returnButton.isEnabled = false
+            returnButton.setTitleColor(UIColor.lightGray, for: .normal)
             
         }
     }
@@ -94,7 +101,10 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBAction func onClickBig(_ sender: UIButton) {
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // segueから遷移先のResultViewControllerを取得する
         let resultViewController:ResultViewController = segue.destination as! ResultViewController

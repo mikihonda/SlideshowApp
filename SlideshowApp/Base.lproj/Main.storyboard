@@ -18,14 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3n5-rF-FnA">
-                                <rect key="frame" x="16" y="64" width="343" height="273"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="549-qq-gGb" appends="YES" id="0H1-XK-9bC"/>
-                                </connections>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qj-H6-AfF">
                                 <rect key="frame" x="50" y="383" width="46" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -35,24 +27,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3R-cK-Ryk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvQ-9i-XDZ">
-                                <rect key="frame" x="278" y="383" width="43" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="戻る">
-                                    <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onReturn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3E-dQ-f1r"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ep-Vp-EDd">
-                                <rect key="frame" x="16" y="64" width="343" height="273"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="XCS-Ts-ukC" kind="show" id="VJj-4k-qMd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMn-GZ-YwC">
@@ -66,8 +40,47 @@
                                     <action selector="onPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUX-7t-gnh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvQ-9i-XDZ">
+                                <rect key="frame" x="278" y="383" width="43" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onReturn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3E-dQ-f1r"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3n5-rF-FnA">
+                                <rect key="frame" x="92" y="120" width="190" height="151"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="dCn-vP-bKZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="549-qq-gGb" appends="YES" id="0H1-XK-9bC"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ep-Vp-EDd">
+                                <rect key="frame" x="92" y="120" width="191" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="uBW-PJ-GH9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onClickBig:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qm5-v6-3sX"/>
+                                    <segue destination="XCS-Ts-ukC" kind="show" id="gOP-Pw-tYT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Ep-Vp-EDd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="IKr-Cs-9Ut"/>
+                            <constraint firstItem="3n5-rF-FnA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="NUN-xU-N4Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ep-Vp-EDd" secondAttribute="trailing" constant="92" id="ObW-jO-70V"/>
+                            <constraint firstItem="1Ep-Vp-EDd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="dWo-KM-7zy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3n5-rF-FnA" secondAttribute="trailing" constant="93" id="lEr-F2-PuG"/>
+                            <constraint firstItem="3n5-rF-FnA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="tUy-2u-Jbz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -91,11 +104,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-Wy-DSk">
-                                <rect key="frame" x="67" y="94" width="240" height="128"/>
+                                <rect key="frame" x="16" y="20" width="343" height="301"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0D-NK-5Nv">
-                                <rect key="frame" x="172" y="268" width="31" height="30"/>
+                                <rect key="frame" x="172" y="379" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
@@ -113,7 +126,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfI-ml-Xhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="VXU-YY-2Ex" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="789" y="-76"/>
+            <point key="canvasLocation" x="788" y="-76.011994002998506"/>
         </scene>
     </scenes>
 </document>
