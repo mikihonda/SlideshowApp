@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var onNext: UIButton!
+    @IBOutlet weak var onNEXT: UIButton!
     @IBOutlet weak var onPlayPause: UIButton!
     @IBOutlet weak var onReturn: UIButton!
     
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             
             onPlayPause.setTitle("Pause", for: .normal)
             
-            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.getter), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
             onNext.isEnabled = false
             onReturn.isEnabled = false
             
@@ -52,27 +52,27 @@ class ViewController: UIViewController {
     // 一定の間隔で処理するタイマー
     var timer: Timer?
     
-//    // Timerによって一定の間隔で呼び出される関数
-//    func onTimer(timer: Timer) {
-//
-//        // 関数が呼び出されていることを確認
-//        print("onTimer")
-//
-//        // 表示している画像の番号を1増やす
-//        dispImageNo += 1
-//
-//        // 表示している画像の番号を元に画像を表示する
-//        displayImage()
-//
-//    }
+    // Timerによって一定の間隔で呼び出される関数
+    @objc func onTimer(timer: Timer) {
+
+        // 関数が呼び出されていることを確認
+        print("onTimer")
+
+        // 表示している画像の番号を1増やす
+        dispImageNo += 1
+
+        // 表示している画像の番号を元に画像を表示する
+        displayImage()
+
+    }
     
     func displayImage() {
         
         // 画像の配列
         let imageNameArray = [
-            "1.jpg",
-            "2.jpg",
-            "3.jpg",
+            "photo1.jpg",
+            "photo2.jpg",
+            "photo3.jpg",
             ]
         
         if dispImageNo < 0 {
@@ -92,30 +92,33 @@ class ViewController: UIViewController {
         // ImageViewに読み込んだ画像をセット
         imageView.image = image
     }
-    
+
     @IBOutlet weak var imageView: UIImageView!
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // segueから遷移先のResultViewControllerを取得する
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
-        
+
         resultViewController.imageView = self.imageView
     }
     
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+
         displayImage()
-        
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func unwind(_ segue: UIStoryboardSegue) {
-    }
+   
 }
+
 

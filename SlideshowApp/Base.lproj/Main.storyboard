@@ -33,6 +33,9 @@
                                 <state key="normal" title="進む">
                                     <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3R-cK-Ryk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMn-GZ-YwC">
                                 <rect key="frame" x="137" y="382" width="101" height="35"/>
@@ -43,7 +46,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUX-7t-gnh"/>
-                                    <action selector="onTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RN8-UH-CRi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvQ-9i-XDZ">
@@ -61,7 +63,7 @@
                                 <rect key="frame" x="16" y="64" width="343" height="273"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="XCS-Ts-ukC" kind="show" id="RFj-aI-QyP"/>
+                                    <segue destination="XCS-Ts-ukC" kind="show" id="VJj-4k-qMd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,10 +72,9 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="3n5-rF-FnA" id="HC1-LL-qx5"/>
-                        <outlet property="onNext" destination="6qj-H6-AfF" id="RDE-4P-E05"/>
-                        <outlet property="onPlayPause" destination="gMn-GZ-YwC" id="hKm-1p-jgR"/>
-                        <outlet property="onReturn" destination="GvQ-9i-XDZ" id="Iil-dd-q8R"/>
-                        <outlet property="unNext" destination="6qj-H6-AfF" id="uTL-gv-sP3"/>
+                        <outlet property="onNEXT" destination="6qj-H6-AfF" id="EtW-ci-LG5"/>
+                        <outlet property="onPlayPause" destination="gMn-GZ-YwC" id="wUP-My-MJm"/>
+                        <outlet property="onReturn" destination="GvQ-9i-XDZ" id="gaE-kg-WCu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,11 +95,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0D-NK-5Nv">
-                                <rect key="frame" x="164" y="268" width="46" height="30"/>
+                                <rect key="frame" x="172" y="268" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="VXU-YY-2Ex" kind="unwind" unwindAction="unwind:" id="WSu-ub-n2R"/>
+                                    <segue destination="VXU-YY-2Ex" kind="unwind" unwindAction="unwind:" id="tdQ-vC-FW3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,7 +107,7 @@
                         <viewLayoutGuide key="safeArea" id="h3V-bD-Wrs"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="Kjy-Wy-DSk" id="PbT-Aw-qa6"/>
+                        <outlet property="imageView" destination="Kjy-Wy-DSk" id="XHr-p0-9I6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfI-ml-Xhf" userLabel="First Responder" sceneMemberID="firstResponder"/>

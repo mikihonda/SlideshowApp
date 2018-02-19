@@ -12,7 +12,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var image = imageView()
+    var image = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
