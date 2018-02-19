@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FC14ECD1203A9ED400B576B7 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14ECD0203A9ED400B576B7 /* ResultViewController.swift */; };
-		FC14ECD3203AAB0400B576B7 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECD2203AAB0400B576B7 /* 1.jpg */; };
-		FC14ECD5203AAB1100B576B7 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECD4203AAB1100B576B7 /* 2.jpg */; };
-		FC14ECD7203AAB1900B576B7 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECD6203AAB1900B576B7 /* 3.jpg */; };
+		FC14ECDB203AAF6F00B576B7 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECD8203AAF6E00B576B7 /* 3.jpg */; };
+		FC14ECDC203AAF6F00B576B7 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECD9203AAF6E00B576B7 /* 1.jpg */; };
+		FC14ECDD203AAF6F00B576B7 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECDA203AAF6F00B576B7 /* 2.jpg */; };
 		FC84C58820385FA00041E44F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84C58720385FA00041E44F /* AppDelegate.swift */; };
 		FC84C58A20385FA00041E44F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84C58920385FA00041E44F /* ViewController.swift */; };
 		FC84C58D20385FA00041E44F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC84C58B20385FA00041E44F /* Main.storyboard */; };
@@ -20,9 +20,9 @@
 
 /* Begin PBXFileReference section */
 		FC14ECD0203A9ED400B576B7 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		FC14ECD2203AAB0400B576B7 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../../1.jpg; sourceTree = "<group>"; };
-		FC14ECD4203AAB1100B576B7 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../../2.jpg; sourceTree = "<group>"; };
-		FC14ECD6203AAB1900B576B7 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpg; path = ../../3.jpg; sourceTree = "<group>"; };
+		FC14ECD8203AAF6E00B576B7 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpg; path = ../../3.jpg; sourceTree = "<group>"; };
+		FC14ECD9203AAF6E00B576B7 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../../1.jpg; sourceTree = "<group>"; };
+		FC14ECDA203AAF6F00B576B7 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../../2.jpg; sourceTree = "<group>"; };
 		FC84C58420385FA00041E44F /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC84C58720385FA00041E44F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC84C58920385FA00041E44F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,10 +65,10 @@
 				FC84C58720385FA00041E44F /* AppDelegate.swift */,
 				FC84C58920385FA00041E44F /* ViewController.swift */,
 				FC84C58B20385FA00041E44F /* Main.storyboard */,
+				FC14ECD9203AAF6E00B576B7 /* 1.jpg */,
+				FC14ECDA203AAF6F00B576B7 /* 2.jpg */,
+				FC14ECD8203AAF6E00B576B7 /* 3.jpg */,
 				FC84C58E20385FA00041E44F /* Assets.xcassets */,
-				FC14ECD2203AAB0400B576B7 /* 1.jpg */,
-				FC14ECD4203AAB1100B576B7 /* 2.jpg */,
-				FC14ECD6203AAB1900B576B7 /* 3.jpg */,
 				FC84C59020385FA00041E44F /* LaunchScreen.storyboard */,
 				FC84C59320385FA00041E44F /* Info.plist */,
 				FC14ECD0203A9ED400B576B7 /* ResultViewController.swift */,
@@ -135,12 +135,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC14ECDD203AAF6F00B576B7 /* 2.jpg in Resources */,
 				FC84C59220385FA00041E44F /* LaunchScreen.storyboard in Resources */,
-				FC14ECD3203AAB0400B576B7 /* 1.jpg in Resources */,
-				FC14ECD5203AAB1100B576B7 /* 2.jpg in Resources */,
-				FC14ECD7203AAB1900B576B7 /* 3.jpg in Resources */,
 				FC84C58F20385FA00041E44F /* Assets.xcassets in Resources */,
 				FC84C58D20385FA00041E44F /* Main.storyboard in Resources */,
+				FC14ECDB203AAF6F00B576B7 /* 3.jpg in Resources */,
+				FC14ECDC203AAF6F00B576B7 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
