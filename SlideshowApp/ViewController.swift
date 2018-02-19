@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             
             onPlayPause.setTitle("Pause", for: .normal)
             
-            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.Play), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.getter), userInfo: nil, repeats: true)
             onNext.isEnabled = false
             onReturn.isEnabled = false
             
