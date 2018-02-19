@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC14ECF6203ABDF700B576B7 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECF3203ABDF600B576B7 /* photo2.jpg */; };
-		FC14ECF9203ABE0F00B576B7 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECF8203ABE0F00B576B7 /* photo1.jpg */; };
-		FC14ECFB203ABE1C00B576B7 /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECFA203ABE1B00B576B7 /* photo3.jpg */; };
 		FC14ECFD203ACFC700B576B7 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14ECFC203ACFC700B576B7 /* ResultViewController.swift */; };
+		FC14ED01203AD7C600B576B7 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECFE203AD7C600B576B7 /* photo1.jpg */; };
+		FC14ED02203AD7C600B576B7 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ECFF203AD7C600B576B7 /* photo2.jpg */; };
+		FC14ED03203AD7C600B576B7 /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC14ED00203AD7C600B576B7 /* photo3.jpg */; };
 		FC84C58820385FA00041E44F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84C58720385FA00041E44F /* AppDelegate.swift */; };
 		FC84C58A20385FA00041E44F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84C58920385FA00041E44F /* ViewController.swift */; };
 		FC84C58D20385FA00041E44F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC84C58B20385FA00041E44F /* Main.storyboard */; };
@@ -19,10 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FC14ECF3203ABDF600B576B7 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo2.jpg; sourceTree = "<group>"; };
-		FC14ECF8203ABE0F00B576B7 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpg; sourceTree = "<group>"; };
-		FC14ECFA203ABE1B00B576B7 /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo3.jpg; sourceTree = "<group>"; };
 		FC14ECFC203ACFC700B576B7 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		FC14ECFE203AD7C600B576B7 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpg; sourceTree = "<group>"; };
+		FC14ECFF203AD7C600B576B7 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo2.jpg; sourceTree = "<group>"; };
+		FC14ED00203AD7C600B576B7 /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo3.jpg; sourceTree = "<group>"; };
 		FC84C58420385FA00041E44F /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC84C58720385FA00041E44F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC84C58920385FA00041E44F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,9 +68,9 @@
 				FC84C58E20385FA00041E44F /* Assets.xcassets */,
 				FC84C59020385FA00041E44F /* LaunchScreen.storyboard */,
 				FC84C59320385FA00041E44F /* Info.plist */,
-				FC14ECF8203ABE0F00B576B7 /* photo1.jpg */,
-				FC14ECF3203ABDF600B576B7 /* photo2.jpg */,
-				FC14ECFA203ABE1B00B576B7 /* photo3.jpg */,
+				FC14ECFE203AD7C600B576B7 /* photo1.jpg */,
+				FC14ECFF203AD7C600B576B7 /* photo2.jpg */,
+				FC14ED00203AD7C600B576B7 /* photo3.jpg */,
 				FC14ECFC203ACFC700B576B7 /* ResultViewController.swift */,
 			);
 			path = SlideshowApp;
@@ -135,9 +135,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC14ECFB203ABE1C00B576B7 /* photo3.jpg in Resources */,
-				FC14ECF6203ABDF700B576B7 /* photo2.jpg in Resources */,
-				FC14ECF9203ABE0F00B576B7 /* photo1.jpg in Resources */,
+				FC14ED03203AD7C600B576B7 /* photo3.jpg in Resources */,
+				FC14ED02203AD7C600B576B7 /* photo2.jpg in Resources */,
+				FC14ED01203AD7C600B576B7 /* photo1.jpg in Resources */,
 				FC84C59220385FA00041E44F /* LaunchScreen.storyboard in Resources */,
 				FC84C58F20385FA00041E44F /* Assets.xcassets in Resources */,
 				FC84C58D20385FA00041E44F /* Main.storyboard in Resources */,
