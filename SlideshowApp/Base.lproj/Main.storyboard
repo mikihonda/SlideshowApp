@@ -33,9 +33,6 @@
                                 <state key="normal" title="進む">
                                     <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="onNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qtM-aX-KkW"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMn-GZ-YwC">
                                 <rect key="frame" x="137" y="382" width="101" height="35"/>
@@ -73,6 +70,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="3n5-rF-FnA" id="HC1-LL-qx5"/>
+                        <outlet property="onNext" destination="6qj-H6-AfF" id="RDE-4P-E05"/>
                         <outlet property="onPlayPause" destination="gMn-GZ-YwC" id="hKm-1p-jgR"/>
                         <outlet property="onReturn" destination="GvQ-9i-XDZ" id="Iil-dd-q8R"/>
                         <outlet property="unNext" destination="6qj-H6-AfF" id="uTL-gv-sP3"/>

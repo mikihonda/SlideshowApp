@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             
             onPlayPause.setTitle("Pause", for: .normal)
             
-            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: (#selector(Play)), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: (#selector("Play")), userInfo: nil, repeats: true)
             onNext.isEnabled = false
             onReturn.isEnabled = false
             
@@ -99,7 +99,7 @@ class ViewController: UIViewController {
         // segueから遷移先のResultViewControllerを取得する
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
-        resultViewController.imageView = self.image
+        resultViewController.imageView = self.imageView
     }
     
     override func viewDidLoad() {
