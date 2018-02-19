@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
-    
     @IBAction func onNext(_ sender: Any) {
         // 1つ進む
         dispImageNo += 1
@@ -26,22 +24,22 @@ class ViewController: UIViewController {
         displayImage()
     }
 
-    @IBAction func onPlayStop(_ sender: Any) {
-        
-        var toggleButton:UIButtonItem
-        
-        if {
-            // スライドショーの一時停止処理など
-            toggleButton = UIButtonItem(barButtonSystemItem: UIBarButtonSystemItem.play, target: self, action: #selector(UIViewController.onPlayStop(_:)))
+    @IBAction func onPlayPause(_ sender: Any) {
+        if self.timer! = nil {
+            
+            onPlayPause.setTitle("Play")
+            timer?.invalidate()
+            timer = nil
+            
         } else {
             
-            // スライドショーの再生処理など
-            toggleButton = UIButtonItem(barButtonSystemItem: UIBarButtonSystemItem.stop, target: self, action: #selector(UIViewController.onPlayStop(_:)))
+            onPlayPause.setTitle("Pause")
+            
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.onPlayPause(_:)), userInfo: nil, repeats: true)
+            onNext.isEnabled = false
+            onReturn.isEnabled = false
+            
         }
-        
-        
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.onPlayStop(_:)), userInfo: nil, repeats: true)
-        
     }
     
     // 表示している画像の番号
@@ -90,6 +88,8 @@ class ViewController: UIViewController {
         // ImageViewに読み込んだ画像をセット
         imageView.image = image
     }
+    
+    @IBOutlet weak var imageView: UIImageView!
     
     // セグエを使用して画面遷移 segueID"result"
     // performSegueWithIdentifier("result", sender: nil)
