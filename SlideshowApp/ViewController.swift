@@ -28,7 +28,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onPlayPause(_ sender: Any) {
-        if self.timer! = nil {
+        
+        if self.timer != nil {
             
             onPlayPause.setTitle("Play", for: .normal)
             timer?.invalidate()
