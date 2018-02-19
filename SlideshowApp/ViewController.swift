@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var unNext: UIButton!
+    @IBOutlet weak var onPlayPause: UIButton!
+    @IBOutlet weak var onReturn: UIButton!
     
     @IBAction func onNext(_ sender: Any) {
         // 1つ進む
@@ -27,15 +30,15 @@ class ViewController: UIViewController {
     @IBAction func onPlayPause(_ sender: Any) {
         if self.timer! = nil {
             
-            onPlayPause.setTitle("Play")
+            onPlayPause.setTitle("Play", for: UIControlState.normal)
             timer?.invalidate()
             timer = nil
             
         } else {
             
-            onPlayPause.setTitle("Pause")
+            onPlayPause.setTitle("Pause", for: UIControlState.normal)
             
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.onPlayPause(_:)), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: (#selector(play)), userInfo: nil, repeats: true)
             onNext.isEnabled = false
             onReturn.isEnabled = false
             
@@ -48,19 +51,19 @@ class ViewController: UIViewController {
     // 一定の間隔で処理するタイマー
     var timer: Timer?
     
-    // Timerによって一定の間隔で呼び出される関数
-    func onTimer(timer: Timer) {
-        
-        // 関数が呼び出されていることを確認
-        print("onTimer")
-        
-        // 表示している画像の番号を1増やす
-        dispImageNo += 1
-        
-        // 表示している画像の番号を元に画像を表示する
-        displayImage()
-        
-    }
+//    // Timerによって一定の間隔で呼び出される関数
+//    func onTimer(timer: Timer) {
+//
+//        // 関数が呼び出されていることを確認
+//        print("onTimer")
+//
+//        // 表示している画像の番号を1増やす
+//        dispImageNo += 1
+//
+//        // 表示している画像の番号を元に画像を表示する
+//        displayImage()
+//
+//    }
     
     func displayImage() {
         
@@ -89,11 +92,14 @@ class ViewController: UIViewController {
         imageView.image = image
     }
     
-    // セグエを使用して画面遷移 segueID"result"
-    performSegueWithIdentifier("result", sender: nil)
-    
     @IBOutlet weak var imageView: UIImageView!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResultViewControllerを取得する
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        
+        resultViewController.imageView = self.image
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

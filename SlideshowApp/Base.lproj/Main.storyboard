@@ -46,7 +46,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUX-7t-gnh"/>
-                                    <action selector="onPlayStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7d-NT-TBb"/>
                                     <action selector="onTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RN8-UH-CRi"/>
                                 </connections>
                             </button>
@@ -74,6 +73,9 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="3n5-rF-FnA" id="HC1-LL-qx5"/>
+                        <outlet property="onPlayPause" destination="gMn-GZ-YwC" id="hKm-1p-jgR"/>
+                        <outlet property="onReturn" destination="GvQ-9i-XDZ" id="Iil-dd-q8R"/>
+                        <outlet property="unNext" destination="6qj-H6-AfF" id="uTL-gv-sP3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,13 +99,20 @@
                                 <rect key="frame" x="164" y="268" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="VXU-YY-2Ex" kind="unwind" unwindAction="unwind:" id="WSu-ub-n2R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="h3V-bD-Wrs"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Kjy-Wy-DSk" id="PbT-Aw-qa6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfI-ml-Xhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VXU-YY-2Ex" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="789" y="-76"/>
         </scene>
