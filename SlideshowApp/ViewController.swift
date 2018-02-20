@@ -9,9 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // 表示している画像の番号
+    var dispImageNo = 0
+    
+    // 一定の間隔で処理するタイマー
+    var timer: Timer?
+    
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var playpauseButton: UIButton!
     @IBOutlet weak var returnButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func onClickBig(_ sender: UIButton) {
+            
+            playpauseButton.setTitle("Play", for: .normal)
+            timer?.invalidate()
+            timer = nil
+            
+            nextButton.isEnabled = true
+            nextButton.setTitleColor(UIColor.magenta, for: .normal)
+            returnButton.isEnabled = true
+            returnButton.setTitleColor(UIColor.magenta, for: .normal)
+
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
     
     @IBAction func onNext(_ sender: Any) {
         // 1つ進む
@@ -53,12 +77,6 @@ class ViewController: UIViewController {
         }
     }
     
-    // 表示している画像の番号
-    var dispImageNo = 0
-    
-    // 一定の間隔で処理するタイマー
-    var timer: Timer?
-    
     // Timerによって一定の間隔で呼び出される関数
     @objc func onTimer(timer: Timer) {
 
@@ -99,10 +117,6 @@ class ViewController: UIViewController {
         // ImageViewに読み込んだ画像をセット
         imageView.image = image
     }
-
-    @IBOutlet weak var imageView: UIImageView!
-    @IBAction func onClickBig(_ sender: UIButton) {
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // segueから遷移先のResultViewControllerを取得する
@@ -114,10 +128,6 @@ class ViewController: UIViewController {
         resultViewController.image = imageView.image!
         
     }
-    
-    @IBAction func unwind(_ segue: UIStoryboardSegue) {
-    }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
